@@ -1,0 +1,494 @@
+Die wichtigsten Mangos Gamemaster Befehle
+.gmlist
+Zeigt eine Liste aller Game Masters die verfügbar sind.
+
+.help $command
+Zeigt eine Anleitung für das angegebenen $command.
+
+.level #level
+Erhöt oder verringert euren Level um die Anzahl des angegebenen Levels.
+
+.maxskill
+Setzt alle Skills des ausgewählten Charakters auf das aktuelle Maximum ihrer Levels.
+
+.additem #itemid
+Legt ein gegenstand in eueren WoW taschen ab. Die ID's findet ihr auch auf Pluendermeister.de unter den Tooltipanzeigen eines Items.
+
+.additemset #itemsetid
+Fügt alle Items eines Sets mit ID #itemsetid zu deinem inventar oder dem Inventar der angeklickten Spielers hinzu.
+
+.modify money #money
+.money #money
+Gibt oder nimmt dem ausgewählten Spieler Geld. Wenn keine Spieler ausgewählt ist, wird das eigene Geld verändert. #money kann negativ sein um Geld zu entfernen.
+
+.learn #parameter
+Der ausgewählte Charakter lernt einen Zauber mit id #parameter. 
+Ein GM kann .learn all benutzen wenn er alle standart Zauber für GMs lernen will, .learn all_myclass um alle Zauber zu lernen die für seine Klasse verfügbar sind und .learn all_lang um alle Sprachen zu lernen(Charakter auswahl wird in diesen Fällen ignoriert)
+
+.go #position_x #position_y #position_z #mapid
+Teleportiert dich zu den angegebenen Koordinaten auf der entsprechenden Map.
+
+
+
+
+Mangos Gamemaster Befehle Userlevel 0
+
+.acct
+Zeigt das Zugangslevel deines Accounts.
+
+.commands
+Zeigt alle Kommandos, die für dein Zugangslevel zu Verfügung stehen.
+
+.dismount
+Lässt dich vom Mount absteigen.
+
+.gmlist
+Zeigt eine Liste aller Game Masters die verfügbar sind.
+
+.help $command
+Zeigt eine Anleitung für das angegebenen $command.
+
+.info
+Zeigt die Anzahl der verbundenen Spieler.
+
+.lockaccount [on|off]
+Erlaubt den Zugriff auf den Account nur über die aktuelle IP-Addresse oder schaltet diese Bedingung wieder aus.
+
+.password $old_password $new_password $new_password
+Ändert dein Account Passwort.
+
+.save
+Speichert deinen Charakter.
+
+.showhonor
+Zeigt deinen Ehrenrang.
+
+.start
+Teleportiert deinen Charakter zum Startplatz deiner Rasse.
+
+
+
+
+
+
+Mangos Befehle Gamemaster (gmlevel: 1)
+
+.announce $MessageToBroadcast
+Sendet eine globale Systemnachricht an alle Spieler die online sind.
+
+.gmoff
+Entfernt das <GM> Symbol bei deinem Charakter und du wirst nicht mehr als GM angezeigt.
+
+.gmon
+Fügt das <GM> Symbol bei deinem Charakter hinzu und du wirst als GM angezeigt
+
+.goname $charactername
+Teleportiert dich zum angegebenen Charakter. Entweder du gibst den Charakternamen an oder klickst den Charakter an, z.B. in einer Gruppe.
+
+.goobject #object_guid
+Teleportiert deinen Charakter zum Gameobjekt mit der GUID #object_guid.
+
+.gps
+Zeigt die Positionsinformation für einen ausgewählen Charakter oder NPC.
+Die Positionsinfo beeinhaltet X, Y, Z, und Orientation, MAP ID und ZONE ID.
+
+.lookuptele $substring
+Sucht alle mit dem .tele Kommando verfügbaren Orte die $substring im
+Namen beeinhalten und zeigt diese an.
+
+.modify $parameter $value
+Verändert den Wert verschiedener Parameter. Verwende .help modify $parameter um Hilfe zur Benutzung des angegebenen Parameter zu erhalten.
+Unterstützte Parameter sind hp, mana, rage, energy, gold, level, speed, swim, scale, bit, bwalk, aspeed, faction, and spell.
+
+.modify aspeed #rate
+Verändert alle Geschwindigkeiten -laufen,schwimmen,rückwärts laufen,rückwärts schwimmen- des ausgewählten Spielers zu "normale Geschwindigkeit dieses Fortbewegungstyps" * #rate. Wenn kein Spieler ausgewählt ist, wird deine eigene Geschwindigkeit verändert. #rate kann ein Wert zwischen 0.1 und 10 sein.
+
+.modify bit #field #bit
+Schaltet das #bit bit vom #field field für den ausgewählten Spieler um. Wenn kein Spieler ausgewählt ist wird dein Charakter verändert.
+
+.modify bwalk #rate
+Verändert die Geschwindigkeit mit der der ausgewählte Charakter rückwärts läuft zu "normale Rückwärtslaufgeschwindigkeit" * #rate. Wenn kein Spieler ausgewählt ist, wird deine eigene Geschwindigkeit geändert.#rate kann ein Wert zwischen 0.1 und 10 sein.
+
+.modify energy #energy
+Verändert die Energie des ausgewählten Spielers. Wenn keine Spieler ausgewählt ist, wird die eigene Energie geändert.
+
+.modify faction #factionid #flagid #npcflagid #dynamicflagid
+Veräandert die Fraktion und Flags des auswählten NPC. Ohne Argumente
+gibt der Befehl die Fraktion und Flags des NPC aus.
+
+.modify hp #newhp
+Verändert die hp eines ausgewählten Spielers. Wenn keine Spieler ausgewählt ist, werden die eigenen hp geändert.
+
+.modify mana #newmana
+Verändert das mana eines ausgewählten Spielers. Wenn keine Spieler ausgewählt ist, wird das eigene mana geändert.
+
+.modify money #money
+.money #money
+Gibt oder nimmt dem ausgewählten Spieler Geld. Wenn keine Spieler ausgewählt ist, wird das eigene Geld verändert.
+#money kann negativ sein um Geld zu entfernen.
+
+.modify rage #newrage
+Verändert die Wut eines ausgewählten Spielers. Wenn keine Spieler ausgewählt ist, wird die eigene Wut verändert.
+
+.modify scale #scale
+Verändert die Grösse des anvisierten Spielers zu "Normale Grösse" * #scale
+#scale kann ein Wert zwischen 0.1 und 3 sein.
+
+.modify speed #rate
+.speed #rate
+Verändert die Geschwindigkeit mit der der ausgewählte Charakter läuft zu "normale Laufgeschwindigkeit" * #rate. Wenn kein Spieler ausgewählt ist, wird deine eigene Geschwindigkeit geändert.
+#rate kann ein Wert zwischen 0.1 und 10 sein.
+
+.modify swim #rate
+Verändert die Geschwindigkeit mit der der ausgewählte Charakter schwimmt zu "normale Schwimmgeschwindigkeit" * #rate. Wenn kein Spieler ausgewählt ist, wird deine eigene Geschwindigkeit geändert. #rate kann ein Wert zwischen 0.1 und 10 sein.
+
+.namego $charactername
+Teleportiert den angegebenen Charakter zu dir. Entweder du gibst den Charakternamen an oder klickst den Charakter an, z.B. in einer Gruppe.
+
+.playsound #soundid
+Spielt den Sound #soundid ab. Der Sound ist nur für dich zu hören, nicht aber für die anderen Spieler.
+Warnung: der client kann mehr als 5000 sounds haben...
+
+.recall [$playername]
+Teleportiert $playername oder den ausgewählten Spieler an den Platz wo er vor der letzten Benutzung eines Teleportationsbefehls war. Wenn kein $playername eingegeben wird und kein Spieler ausgewählt ist, teleportiert es dich.
+
+.saveall
+Speichert alle Spieler die gerade online sind.
+
+.modify speed #rate
+.speed #rate
+Verändert die Geschwindigkeit mit der der ausgewählte Charakter läuft zu "normale Laufgeschwindigkeit" * #rate. Wenn kein Spieler ausgewählt ist, wird deine eigene Geschwindigkeit geändert.
+#rate kann ein Wert zwischen 0.1 und 10 sein.
+
+.taxicheat #flag
+Versteckt oder deckt alle Flugrouten für den ausgewählten Spieler temporär auf. Wenn keine Charakter
+ausgewählt ist, werden alle deine Flugrouten aufgedeckt/versteckt. Verwende für #flag 1 um sie aufzudecken oder verwende für #flag 0 um alle Routen zu verstecken. Besuchte Flugrouten sind immernoch auswählbar nachdem alle Routen versteckt wurden.
+
+.visible [0||1]
+Gibt den aktuellen Sichtbarkeitsstatus bzw. macht einen GM sichtbar(1)
+oder unsichtbar(0) für andere Spieler.
+
+.whispers on|off
+Erlaubt/Verbietet das Anflüstern des GMs von Spielern. Standard dieser Option wird in der mangosd.conf eingestellt.
+
+
+
+
+
+
+Mangos Gamemaster Befehle (gmlevel: 2)
+
+.addmove #creature_guid [#waittime]
+Fügt den aktuellen Standort deines Charakters bei den Wegpunkten des NPC mit GUID #creature_guid hinzu. Mit #waittime kann man eine zusätzliche Wartezeit angeben.
+
+.addspw #creatureid
+Spawned eine Creature mit der angegebenen template id #creatureid.
+
+.addvendoritem #itemId <#maxcount><#incrtime>
+Fügt das Item #itemid zu der Itemliste des ausgewählten Händlers hinzu. Es kann auch die maximale Anzahl des Items in der Itemliste des Verkäufers angegeben werden und die zeit zum wiederherstellen der Item Anzahl.
+
+.changelevel #level
+Ändert das Level des ausgewählten NPC auf #level.
+#level kann ein Wert zwischen 1 und 63 sein.
+
+.delete
+Entfernt den ausgewählten NPC aus der Welt.
+
+.delobject #go_guid
+Entfernt das Gameobjekt mit der GUID #go_guid.
+
+.delticket all
+.delticket #num
+.delticket $character_name
+all um alle Tickets auf dem Server zu entfernen, 
+#num um das Ticket mit der Nummer #num zu entfernen,
+$character_name um die Tickets des angegebenen Charakters zu entfernen.
+
+.delvendoritem #itemId
+Entfernt das Item #itemid von der Itemliste des ausgewählten Händlers.
+
+.demorph
+Demorphed den ausgewählten Spieler.
+
+.displayid #displayid
+Ändert die model id des ausgewählten NPC in #displayid.
+
+.factionid #factionid
+Ändert die Fraktion des ausgewählten NPC in #factionid.
+
+.gocreature #creature_guid
+Teleportiert deinen Charakter zum NPC mit der GUID #creature guid.
+
+.guid
+Zeigt die GUID des ausgewählten Charakters an.
+
+.itemmove #sourceslotid #destinationslotid
+Bewegt ein Item von Slot #sourceslotid zu Slot #destinationslotid in deinem Inventar
+
+.kick [$charactername]
+Kickt den angegebenen Charakter vom Server. Wenn kein Charaktername angegeben ist dann wird der angeklickte Spieler (außer man selbst) gekickt.
+
+.moveobject #goguid [#x #y #z]
+Versetzt das Gameobjekt mit GUID #goguid auf deine aktuelle Position (oder auf (#x,#y,#z) Koordinaten wenn angegeben).
+
+.name $name
+Ändert den Namen des angeklicken NPC oder Charakters zu $name. 
+
+.npcflag #npcflag
+Setzt die NPC flags des creature template des ausgewählten NPC und des ausgewählten NPC auf #npcflag. NPC flags werden auf alle NPCs des ausgewählten NPC templates nach einem server neustart oder grid reload angewendet.
+
+.pinfo [$player_name] [rep]
+Zeigt Accountinformationen über den ausgewählten Charakter oder den Character mit angegebenen Namen $player_name. Wenn der rep parameter angeführt wird, werden Infos über den Ruf ausgegeben.
+
+.prog
+Teleportiert dich zur Programmierinsel.
+
+.run #flag
+Aktiviert oder Deaktiviert rennende Fortbewegung für einen ausgewählte NPC.
+Benutzt #flag mit Wert 1 zum aktivieren, benutzt #flag mit Wert 0 zum deaktivieren. 
+
+.setmovetype [#creature_guid] stay/random/way
+Definiert für einen per #creature_guid ausgewählten NPC (oder angeklickten wenn kein #creature_guid angegeben wurde) die Bewegungsart und setzt den NPC zurück an die Respawn-Position (wenn der NPC am Leben ist). Alle für den NPC vorhandenen Wegpunkte werden aus der Datenbank entfernt. Falls die Kreatur gerade tot sein sollte wird die Bewegungsart beim nächsten Respawn übernommen.
+
+.spawndist #dist
+Ändert die Spawnentfernung einer ausgewählten Creature auf #dist.
+
+.spawntime #time 
+Ändert die Spawnzeit einer ausgewählten Creature auf #time.
+
+.subname $Name
+Ändert den Beinamen des ausgewählten NPC oder Spieler zu $Name. 
+
+.targetobject [#go_id|#go_name_part]
+Lokalisiert und gibt die Position des nächstgelegenen Gameobjektes an. Wenn #go_id oder #go_name_part angegeben wird dann lokalisert der Befehl das nächstgelegene Gameobjekt mit der template id #go_id oder dessen Namen #go_name_part beeinhaltet und gibt die Position dessen an.
+
+.ticket on
+.ticket off
+.ticket #num
+.ticket $character_name
+ON/OFF für GM’s um neue Tickets gleich anzuzeigen oder nicht,
+$character_name um die Tickets eines bestimmten Charakters zu betrachten,
+#num um das Ticket Nummer #num zu zeigen.
+
+.turnobject #goguid 
+Setzt das Gameobject mit GUID #goguid in die selbe Ausrichtung wie deine aktuelle Ausrichtung. 
+
+
+
+
+Mangos Admin Befehle (gmlevel: 3)
+.addgo #id
+Fügt ein Gameobjekt vom gameobject_template an deiner momentanen Position in die Welt mit ID #id ein.
+BEACHTE: Dies ist eine kopie von .gameobject.
+
+.additem #itemid/[#itemname]/#shift-click-item-link #itemcount
+Fügt eine bestimmte Anzahl von Items mit der ID #itemid (oder dem exakten (!) Namen $itemname in eckigen Klammern oder dem mit SHIFT-Klick auf ein Item im Inventar eingefügten Link) zu deinem Inventar oder dem Inventar des angewählten Charakters hinzu. Wenn #itemcount ausgelassen wird, wird nur ein Item hinzugefügt.
+
+.additemset #itemsetid
+Fügt alle Items eines Sets mit ID #itemsetid zu deinem inventar oder dem Inventar der angeklickten Spielers hinzu.
+
+.addquest #quest_id
+Fügt dem Questlog des Charakters den Quest mit der ID #quest_id hinzu. Quests die von Items gestartet werden können nicht mit diesem Befehl hinzugefügt werden, aber mit dem korrekten .additem Befehl kann das Item das diesen startet hinzugefügt werden.
+
+.allowmove
+Aktiviert oder Deaktiviert die Bewegung des ausgewählten NPC.
+
+.anim #emoteid
+Spielt ein Emote mit der ID #emoteid an deinem Charakter ab.
+
+.aura #spellid
+Fügt die Aura des angegebenen Spells mit der ID #spellid deinem Charakter hinzu.
+
+.banaccount $name
+Bannt den Account mit dem Namen $name (kann durch das .pinfo Kommando angezeigt werden) und kickt den betroffenen Spieler sofort vom Server falls er eingeloggt ist.
+
+.banip #ip
+Bannt die angegebene IP und kickt alle betroffenen Spieler.
+
+.bank
+Zeigt dein Bankfach.
+
+.cooldown [#spell_id]
+Entfernt alle Cooldowns (wenn keine spell id angegeben) oder den Cooldown des Spells mit #spell_id eines ausgewählten Charakters oder dir selbst (wenn kein Charakter ausgewählt ist).
+
+.createguild $GuildName $GuildLeaderName
+Erstellt eine Gilde mit dem Namen $GuildName und dem Spieler $GuildLeaderName als Anführer.
+
+.cshutdown 
+Bricht das Herunterfahren ab.
+
+.die
+Tötet den ausgewählten Spieler oder NPC. Wenn kein Spieler oder NPC ausgewählt ist, wirst du getötet.
+
+.distance
+Gibt die Distanz von dir zum ausgewählten NPC an.
+
+.emote #emoteid
+Spielt ein Emote mit der ID #emoteid bei dem ausgewählten NPC ab.
+
+.explorecheat #flag
+Versteckt oder erkundet alle Karteteile für den ausgewählten Spieler. Wenn kein Spieler ausgewählt ist, werden die Kartenteile für dich versteckt oder erkundet.
+Benutze #flag mit Wert 1 zum erkunden, Benutze #flag mit Wert 0 zum verstecken aller Karteteile.
+
+.gameobject #id
+Fügt ein Gameobjekt vom gameobject_template an deiner momentanen Position in die Welt mit ID #id ein.
+
+.getvalue #field #isInt
+Zeigt das Feld #field des ausgewählten NPC. Wenn niemand augewählt ist, wird der Wert deines Feldes ausgegeben.
+Benutze #isInt mit Wert 1 wenn der Inhalt des erwarteten Feldes ein Integer ist.
+
+.go #position_x #position_y #position_z #mapid
+Teleportiert dich zu den angegebenen Koordinaten auf der entsprechenden Map.
+
+.goxy #x #y [#mapid]
+Teleportiert dich zu den Koordinaten (#x,#y) auf Höhe des Bodens auf der map mit mapid #mapid oder, wenn #mapid nicht angegeben ist, auf der aktuellen map.
+
+.hidearea #areaid
+Versteckt den Bereich mit der id #areaid für den ausgewählten Charakter. Wenn kein Charakter ausgewählt ist, wird der Bereich für dich versteckt.
+
+.hover #flag
+Aktiviert/Deaktiviert den Schwebe-Modus für deinen Charakter.
+Benutze #flag mit Wert 1 zum aktivieren, Benutze #flag mit Wert 0 zum deaktivieren des Schwebens.
+
+.idleshutdown #delay|cancel
+Fährt den Server nach #delay Sekunden herrunter, wenn keine aktiven Verbindungen (keine Spieler) vorhanden sind. Verwende den Wert cancel um den Vorgang abzubrechen.
+
+.learn #parameter
+Der ausgewählte Charakter lernt einen Zauber mit id #parameter. 
+Ein GM kann .learn all benutzen wenn er alle standart Zauber für GMs lernen will, .learn all_myclass um alle Zauber zu lernen die für seine Klasse verfügbar sind und .learn all_lang um alle Sprachen zu lernen(Charakter auswahl wird in diesen Fällen ignoriert)
+
+.levelup [$playername] [#numberoflevels]
+Erhöht/Verringert das Level des Characters mit Namen $playername (oder des Ausgewählten wenn kein Name angegeben wird) um #numberoflevels oder +1 wenn kein #numberoflevels angegeben ist. Wenn #numberoflevels 0 ist, wird das gleiche Level neu gestartet. Wenn kein Character angeklickt und kein Name angegeben ist, wird dein Level verändert. Befehl kann auch auf Charactere die offline sind angewendet werden. Alle Stats und abhängige Werte werden neu berechnet. Bei Verringern des Levels können die Talente resettet werden falls dies nötig ist. Beim Verringern können auch Items mit höherer Levelanforderung verloren gehen.
+
+.linkgrave #graveyard_id [alliance|horde]
+Verbindet die aktuelle Zone mit einem Friedhof für alle (oder Allianz/Horde) Geister. Dadurch werden die Geister von Characteren in dieser Zone zu diesem Friedhof teleportiert wenn sie sterben, falls dieser der nähste ist und Geister von dieser Fraktion annimmt. Fügt nur einen Friedhof zu einer anderen Karte hinzu und nur wenn keine Friedhöfe mit dieser verbunden sind.
+
+.listcreature #creature_id [#max_count]
+Gibt alle NPCs mit creature id #creature_id aus die auf dem Server gefunden werden. Gibt die guids der NPCs und ihre Koordinaten aus sortiert nach Entfernung vom Character. Es werden maximal #max_count NPCs ausgegeben. Wenn #max_count nicht angegeben ist wird 10 als Standart genommen.
+
+.listitem #item_id [#max_count]
+Gibt Items mit item id #item_id aus die in allen Charakter Inventaren, Briefen und Auktionen gefunden werden. Gibt die Item guids, die guid der Itembesitzers, die Accounts und Namen der Besitzers aus. Es werden maximal #max_count Items ausgegeben. Wenn #max_count nicht angegeben ist wird 10 als Standart genommen.
+
+.listobject #gameobject_id [#max_count]
+Gibt alle Gameobjekts mit Gameobjekt id #gameobject_id aus die auf dem Server gefunden werden. Gibt die guids der Gameobjekts und ihre Koordinaten aus sortiert nach Entfernung vom Character. Es werden maximal #max_count Gameobjekts ausgegeben. Wenn #max_count nicht angegeben ist wird 10 als Standart genommen.
+
+.loadscripts $scriptlibraryname
+Entläd die aktuelle Script Library und läd eine neue mit dem Namen $scriptlibraryname. Wenn kein Name angegeben ist, wird die aktuelle Script Library neu geladen, wenn man sie während des Serverbetriebs verändert hat.
+
+.lookupcreature $namepart
+Sucht nach einem NPC mit dem angegebenen Teil des Namens $namepart, und gibt alle passenden NPCs mit ihren ID’s aus.
+
+.lookupitem $itemname
+Sucht nach einem Item mit dem Namen $itemname, und gibt alle passenden Items mit ihren ID’s aus.
+
+.lookupitemset $itemname
+Sucht nach einem Itemset mit dem Namen $itemname, und gibt alle passenden Itemsets mit ihren ID’s aus.
+
+.lookupobject $objname
+Sucht ein Gameobjekt mit dem angegebenen Teil des Namens $objname, und gibt alle Treffer mit ihren IDs aus.
+
+.lookupquest $namepart
+Sucht einen Quest mit dem angegebenen Teil des Questtitels $namepart, und gibt alle Treffer mit ihren ID’s aus.
+
+.lookupskill $namepart
+Sucht einen Skill mit dem angegebenen Teil des Skillnamens $namepart, und gibt alle Treffer mit ihren ID’s aus.
+
+.lookupspell $namepart
+Sucht einen Zauber mit dem angegebenen Teil des Zaubernamens $namepart, und gibt alle Treffer mit ihren ID’s aus.
+
+.maxskill
+Setzt alle Skills des ausgewählten Charakters auf das aktuelle Maximum ihrer Levels.
+
+.Mod32Value #field #value
+Fügt eine Zahl #value zum Feld #field deines Charakters hinzu.
+
+.morph #displayid
+Ändert deine aktuelle model id zu #displayid.
+
+.neargrave [alliance|horde]
+Findet den nähsten Friedhof der mit dieser Zone verlinkt ist (oder nur den nächsten der Allianz oder Horde)
+
+.NewMail #flag
+Sendet eine Briefbenachrichtigung mit der flag #flag.
+
+.npcinfo
+Zeigt eine Liste von Details für den ausgewählten NPC.
+
+In der Liste stehts:
+- GUID, Fraktion, NPC flags, Entry ID, Model ID,
+- Level,
+- Gesundheit (current/maximum),
+- Field flags, dynamic flags, faction template, 
+- Position information,
+- and the creature type, e.g. if the creature is a vendor.
+
+.object #displayid $save
+Fügt ein Objekt des Typs Briefkasten mit der DISPLAY ID #displayid bei deiner aktuellen Position hinzu. Wenn $save auf 'true' gesetzt ist, wird das Objekt in der Datenbank gespeichert.
+
+.QNM #flag
+Frägt die nächste Mailzeit mit der Flag #flag ab.
+
+.removequest #quest_id
+Setzt das Quest #quest_id auf den Status nicht vollendet und nicht aktiv (und entfernt es aus dem Questlog) für den ausgewählten Spieler.
+
+.reset level
+Resettet auf Level 1 was Stat- und Talentreset beinhaltet. Ausgerüstete Items mit höheren Levelanforderungen können verloren gehen.
+
+.reset spells
+Entfernt alle nicht-original Zauber aus dem Fähigkeitenbuch.
+
+.reset stats
+Resettet (rekalkuliert) alle Stats des ausgewählten Spielers auf ihre original werte für das aktuelle Level.
+
+.reset talents
+Entfernt alle Talente vom ausgewählten Spieler.
+
+.respawn
+Respawnt alle nahegelgenen NPCs und GOs ohne auf das auslaufen der Respawnzeit zu warten.
+
+.revive [$playername]
+Belebt den angegebenen oder ausgewählten Spieler. Wenn kein Spieler angegeben ist, belebt es dich wieder.
+
+.security $name #level
+Ändert das Securitylevel vom Spieler $name auf ein Level von #level.
+#level kann ein Wert zwischen 0 und 5 sein.
+
+.setskill #skillId #level #max
+Lernt einen Skill mit der ID #skill mit einem derzeitigen Skill von #level und einem angegebene Maximalskill #max, dem ausgewählten Charakter. Wenn kein Charakter ausgewählt ist, wird dir der Skill gelernt.
+
+.setvalue #field #value #isInt
+Ändert das Feld #field des ausgewählten NPC auf dem Wert #value. Wenn kein NPC ausgewählt ist, wird dein Feld geändert.
+#isInt 1, wenn #value ein Integer ist.
+
+.showarea #areaid
+Erkundet den Bereich mit #areaid für den ausgewählten Charakter. Wenn kein Charakter ausgewählt ist, erkundet es den Bereich für dich.
+
+.shutdown second
+Fährt den Server nach X Sekunden herunter. 
+
+.standstate #emoteid
+Verändert das Emote deines Charakters während du stehst zu #emoteid.
+
+.unaura #spellid
+Entfernt die Aura des Spells mit der ID #spellid von deinem Charakter.
+
+.unbanaccount $name
+Entbannt Account $name.
+
+.unbanip #ip
+Entbannt angegebene IP-Adresse.
+
+.unlearn #startspell #endspell
+Verlernt dem ausgewählten Spieler alle Zauber zwischen der id #startspell und der id #endspell. Wenn kein #endspell angegeben ist, verlernt man nur den Zauber mit id #startspell.
+
+.update #field #value
+Updated das Feld #field des ausgewählten Charakters oder Creature mit dem Wert #value. 
+Wenn kein #value angegeben ist, dann wird der aktuelle Wert des Feldes #field ausgegeben.
+
+.wchange #weathertype #status
+Setzt das aktuelle Wetter auf #weathertype mit einer Intensität von #status.
+#weathertype kann 1 (für Regen), 2 (für Schneefall) oder 3 (für Sandsturm) sein. #status kann 0 (deaktiviert z.B leichter Regen) oder 1 (aktiviert z.B schwerer Schneefall) sein.
+
+.worldport #map #position_x #position_y #position_z
+Teleportiert dich zu den angegebenen Koordinaten auf der angegebenen Karte.
+
